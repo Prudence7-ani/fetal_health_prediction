@@ -1,6 +1,5 @@
-# 📦 Streamlit App Starter Kit 
-```
-⬆️ (Replace above with your app's name)
+# 📦 Fetal Health Prediction
+🏥 Machine Learning model to predict fetal health status using Cardiotocography (CTG) data.
 ```
 
 Description of the app ...
