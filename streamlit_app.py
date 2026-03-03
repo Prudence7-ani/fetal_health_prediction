@@ -4,14 +4,11 @@ import pandas as pd
 import numpy as np
 
 def load_model():
-    model = joblib.load(C:\Users\agura\Downloads\Pandas\model_outputs\best_model.joblib)
-    scaler = joblib.load(C:\Users\agura\Downloads\Pandas\model_outputs\scaler.joblib)
-    selected_features = joblib.load(C:\Users\agura\Downloads\Pandas\model_outputs\selected_features.joblib)
+    model = joblib.load('model_outputs\best_model.joblib')
+    scaler = joblib.load('model_outputs\scaler.joblib')
+    selected_features = joblib.load('model_outputs\selected_features.joblib')
     return model, scaler, selected_features
-     except:
-        st.error("❌ Model files not found. Please upload them to the repository.")
-        return None, None, None
-
+    
 model, scaler, selected_features = load_model()
 
 if model is None:
