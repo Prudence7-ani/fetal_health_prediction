@@ -8,6 +8,14 @@ def load_model():
     scaler = joblib.load(C:\Users\agura\Downloads\Pandas\model_outputs\scaler.joblib)
     selected_features = joblib.load(C:\Users\agura\Downloads\Pandas\model_outputs\selected_features.joblib)
     return model, scaler, selected_features
+     except:
+        st.error("❌ Model files not found. Please upload them to the repository.")
+        return None, None, None
+
+model, scaler, selected_features = load_model()
+
+if model is None:
+    st.stop()
   
 st.title('Fetal Health Prediction')
 st.write('Enter cardiotocogram (CTG) measurements to predict fetal health status')
