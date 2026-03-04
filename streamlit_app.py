@@ -19,6 +19,8 @@ st.write('Enter cardiotocogram (CTG) measurements to predict fetal health status
 
 st.sidebar.header('About')
 st.sidebar.write('This app predicts fetal health using machine learning')
+st.sidebar.write('**Model:** Gradient Boosting Classifier')
+st.sidebar.write('**Accuracy:** 94.56%')
 
 st.header('📊 Enter CTG Measurements')
 
@@ -73,6 +75,8 @@ if st.button('🔍 Make Prediction', key='predict'):
     
     with col3:
         st.metric('Status', 'High Risk' if prediction > 1 else 'Low Risk')
+
+    st.info(f"**Status:** {class_descriptions[prediction]}")
     
     st.subheader('Class Probabilities')
     prob_data = pd.DataFrame({
